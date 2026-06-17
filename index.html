@@ -1,0 +1,1042 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>אפשרויות קייטרינג לארוחת יום הולדת ל-30 אורחים</title>
+  <style>
+    :root {
+      --ink: #18212f;
+      --muted: #627083;
+      --line: #d9e1e6;
+      --paper: #f7f4ed;
+      --soft: #fff7e7;
+      --green: #246b5b;
+      --green-soft: #e4f1ec;
+      --rose: #a0445a;
+      --rose-soft: #f7e7eb;
+      --gold: #b36b12;
+      --gold-soft: #fbefd9;
+      --blue: #2d668c;
+      --blue-soft: #e8f1f6;
+      --white: #ffffff;
+      --shadow: 0 18px 42px rgba(24, 33, 47, 0.11);
+      --small-shadow: 0 8px 22px rgba(24, 33, 47, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(135deg, rgba(36, 107, 91, 0.12) 0%, rgba(255, 255, 255, 0) 32%),
+        linear-gradient(315deg, rgba(160, 68, 90, 0.12) 0%, rgba(255, 255, 255, 0) 34%),
+        var(--paper);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+      direction: rtl;
+    }
+
+    main {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 32px 0 48px;
+    }
+
+    header {
+      position: relative;
+      margin-top: 8px;
+      padding: 34px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 250, 239, 0.92) 54%, rgba(232, 241, 246, 0.9) 100%);
+      box-shadow: var(--shadow);
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 92% 16%, rgba(179, 107, 18, 0.16), rgba(179, 107, 18, 0) 24%),
+        radial-gradient(circle at 12% 88%, rgba(36, 107, 91, 0.14), rgba(36, 107, 91, 0) 25%);
+    }
+
+    header > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--green);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 860px;
+      margin: 0;
+      font-size: 3.6rem;
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .intro {
+      max-width: 790px;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .notice {
+      margin: 22px 0 0;
+      padding: 14px 18px 14px 16px;
+      border: 1px solid #e1cfa1;
+      border-right: 6px solid var(--gold);
+      background: var(--soft);
+      border-radius: 8px;
+      color: #553b0d;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .stat {
+      padding: 14px;
+      border: 1px solid rgba(24, 33, 47, 0.08);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.78);
+    }
+
+    .stat span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .stat strong {
+      display: block;
+      margin-top: 4px;
+      color: var(--ink);
+      font-size: 1.15rem;
+    }
+
+    .quick-nav {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      display: flex;
+      gap: 8px;
+      margin: 18px 0 26px;
+      padding: 10px;
+      overflow-x: auto;
+      border: 1px solid rgba(24, 33, 47, 0.08);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.88);
+      box-shadow: var(--small-shadow);
+      backdrop-filter: blur(12px);
+    }
+
+    .quick-nav a {
+      flex: 0 0 auto;
+      padding: 8px 12px;
+      border-radius: 999px;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 800;
+    }
+
+    .quick-nav a:hover,
+    .quick-nav a:focus {
+      background: var(--green-soft);
+      color: var(--green);
+      outline: none;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin: 0 0 24px;
+    }
+
+    .summary-card,
+    .section {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--small-shadow);
+    }
+
+    .summary-card {
+      position: relative;
+      padding: 18px;
+      min-height: 214px;
+      overflow: hidden;
+    }
+
+    .summary-card.recommended {
+      border-color: #86b7a8;
+      background: linear-gradient(180deg, #ffffff 0%, var(--green-soft) 100%);
+    }
+
+    .summary-card.accent-rose {
+      border-color: #e4b7c1;
+      background: linear-gradient(180deg, #ffffff 0%, var(--rose-soft) 100%);
+    }
+
+    .summary-card.accent-gold {
+      border-color: #efd19d;
+      background: linear-gradient(180deg, #ffffff 0%, var(--gold-soft) 100%);
+    }
+
+    .summary-card.accent-blue {
+      border-color: #b9d2df;
+      background: linear-gradient(180deg, #ffffff 0%, var(--blue-soft) 100%);
+    }
+
+    .tag {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.82);
+      color: var(--green);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    h2,
+    h3 {
+      margin: 0;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      font-size: 1.32rem;
+    }
+
+    h3 {
+      font-size: 1.08rem;
+    }
+
+    .price {
+      margin: 12px 0 4px;
+      font-size: 1.55rem;
+      line-height: 1.15;
+      font-weight: 800;
+      color: var(--rose);
+    }
+
+    .per-guest {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .section {
+      margin-top: 24px;
+      overflow: hidden;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 22px;
+      background:
+        linear-gradient(90deg, rgba(36, 107, 91, 0.08), rgba(255, 255, 255, 0.6)),
+        #fbfaf7;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-head p {
+      margin: 8px 0 0;
+      color: var(--muted);
+    }
+
+    .total-box {
+      min-width: 230px;
+      text-align: right;
+      color: var(--muted);
+      align-self: center;
+      padding: 12px 14px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.78);
+    }
+
+    .total-box strong {
+      display: block;
+      color: var(--ink);
+      font-size: 1.25rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--white);
+    }
+
+    th,
+    td {
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--line);
+      text-align: right;
+      vertical-align: top;
+    }
+
+    th {
+      background: #edf4f1;
+      color: #344054;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #fbfcfc;
+    }
+
+    tbody tr:hover {
+      background: #f7fbf8;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .money {
+      white-space: nowrap;
+      font-weight: 700;
+    }
+
+    .course {
+      color: var(--green);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .section.featured {
+      border-color: #95c3b4;
+      box-shadow: var(--shadow);
+    }
+
+    .section.featured .section-head {
+      background:
+        linear-gradient(90deg, rgba(36, 107, 91, 0.18), rgba(255, 247, 231, 0.72)),
+        #fbfaf7;
+    }
+
+    .notes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .note {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: var(--small-shadow);
+    }
+
+    .note h2 {
+      margin-bottom: 8px;
+    }
+
+      ul {
+        margin: 8px 0 0;
+      padding-right: 20px;
+      padding-left: 0;
+    }
+
+    li {
+      margin: 6px 0;
+    }
+
+    a {
+      color: #1f6f8b;
+      font-weight: 700;
+    }
+
+    footer {
+      margin-top: 28px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .callout-row {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .decision-box {
+      padding: 20px;
+      border: 1px solid #95c3b4;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #ffffff, var(--green-soft));
+      box-shadow: var(--small-shadow);
+    }
+
+    .decision-box p {
+      margin: 8px 0 0;
+      color: var(--muted);
+    }
+
+    @media (max-width: 820px) {
+      .summary-grid,
+      .notes,
+      .hero-stats,
+      .callout-row {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        padding: 24px;
+      }
+
+      h1 {
+        font-size: 2.35rem;
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .total-box {
+        margin-top: 14px;
+        text-align: right;
+      }
+
+      table,
+      thead,
+      tbody,
+      th,
+      td,
+      tr {
+        display: block;
+      }
+
+      thead {
+        display: none;
+      }
+
+      tr {
+        border-bottom: 1px solid var(--line);
+        padding: 10px 0;
+      }
+
+      tr:last-child {
+        border-bottom: 0;
+      }
+
+      td {
+        border-bottom: 0;
+        padding: 6px 16px;
+      }
+
+      td::before {
+        content: attr(data-label);
+        display: block;
+        margin-bottom: 2px;
+        color: var(--muted);
+        font-size: 0.76rem;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      main {
+        width: 100%;
+        padding: 0;
+      }
+
+      .quick-nav {
+        position: static;
+        box-shadow: none;
+      }
+
+      .summary-card,
+      .section,
+      .note,
+      .decision-box {
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">תכנון קייטרינג ליום הולדת</p>
+      <h1>אפשרויות תפריט ל-30 אורחים</h1>
+      <p class="intro">
+        תכנון לארוחת צהריים חלבית ודגים למסיבת יום הולדת ביום שישי, על בסיס המנות ומחירי המגשים שמופיעים באתר של ליאתי. הכיוון המתאים ביותר הוא בופה עשיר עם סלטים, מנות חמות צמחוניות, דגים, ירקות טריים וקינוחים.
+      </p>
+      <div class="notice">
+        הערת מחיר: כל המחירים בעמוד כוללים מע"מ. אין צורך בציוד, עריכה או מלצרים, ולכן הם לא נכללים בתקציב. משלוח הכלים מ-Green Box כלול בחישוב. משלוח הקייטרינג מליאתי ודמי משלוח/תפעול של Wolt עדיין צריכים אישור מול הספקים, כי הם תלויים בכתובת ובתנאי ההזמנה.
+      </div>
+      <div class="hero-stats" aria-label="תקציר התכנון">
+        <div class="stat">
+          <span>אורחים</span>
+          <strong>30</strong>
+        </div>
+        <div class="stat">
+          <span>אירוע</span>
+          <strong>ארוחת יום הולדת</strong>
+        </div>
+        <div class="stat">
+          <span>סה"כ מומלץ</span>
+          <strong>₪3,508-₪3,543</strong>
+        </div>
+        <div class="stat">
+          <span>קינוח</span>
+          <strong>2 עוגות שוקולד</strong>
+        </div>
+      </div>
+    </header>
+
+    <nav class="quick-nav" aria-label="חלקי העמוד">
+      <a href="#summary">תקציר</a>
+      <a href="#full-lunch">ארוחה מלאה</a>
+      <a href="#fish-forward">יותר דגים</a>
+      <a href="#budget">חסכוני</a>
+      <a href="#tableware">כלים אקולוגיים</a>
+      <a href="#drinks">שתייה</a>
+      <a href="#cakes">עוגות</a>
+      <a href="#combined">סיכום עלויות</a>
+      <a href="#notes">הערות להזמנה</a>
+    </nav>
+
+    <section class="summary-grid" id="summary" aria-label="תקציר האפשרויות">
+      <article class="summary-card recommended">
+        <span class="tag">מומלץ</span>
+        <h2>ארוחת שישי מלאה</h2>
+        <p>בופה מאוזן של מנות צמחוניות ודגים. מומלץ לקחת בלי קינוחי קייטרינג, כי נוספו שתי עוגות שוקולד.</p>
+        <p class="price">₪3,493-₪3,528</p>
+        <p class="per-guest">כולל כלים, שתייה ועוגות: ₪3,508-₪4,251 לפי בחירת קינוחי קייטרינג</p>
+      </article>
+
+      <article class="summary-card accent-rose">
+        <span class="tag">חגיגי יותר</span>
+        <h2>ארוחה עם דגש על דגים</h2>
+        <p>הארוחה המלאה בתוספת מנת דג עיקרית מתפריט הקייטרינג, כמו שיפודי סלמון או סלמון בפנקו.</p>
+        <p class="price">₪3,847-₪3,882</p>
+        <p class="per-guest">כולל כלים, שתייה ועוגות: ₪3,862-₪4,605 לפי בחירת קינוחי קייטרינג</p>
+      </article>
+
+      <article class="summary-card accent-gold">
+        <span class="tag">קליל יותר</span>
+        <h2>ארוחה חסכונית</h2>
+        <p>עדיין ארוחת צהריים מכובדת, עם פחות תוספות יקרות ועם קינוחי קייטרינג כאפשרות בלבד.</p>
+        <p class="price">₪2,903-₪2,938</p>
+        <p class="per-guest">כולל כלים, שתייה ועוגות: ₪3,178-₪3,661 לפי בחירת קינוחי קייטרינג</p>
+      </article>
+
+      <article class="summary-card accent-blue">
+        <span class="tag">כלים אקולוגיים</span>
+        <h2>כלים לאורחים</h2>
+        <p>צלחת עיקרית, צלחת קינוח, מזלג, סכין, כפית, כוס, מפיות ופלייסמטים ל-30 אורחים.</p>
+        <p class="price">₪184</p>
+        <p class="per-guest">כולל מע"מ. ₪229 כולל משלוח Green Box</p>
+      </article>
+
+      <article class="summary-card accent-blue">
+        <span class="tag">שתייה קלה</span>
+        <h2>בקבוקי 1.5 ליטר</h2>
+        <p>16 בקבוקים, כולל קולה/זירו, משקאות לימון-ליים, מים מינרליים וסודה/מים מוגזים.</p>
+        <p class="price">₪134</p>
+        <p class="per-guest">כולל מע"מ. לא כולל דמי משלוח/תפעול של Wolt</p>
+      </article>
+
+      <article class="summary-card accent-rose">
+        <span class="tag">עוגות</span>
+        <h2>2 עוגות שוקולד</h2>
+        <p>שתי עוגות שוקולד בקוטר 24 ס"מ. הן יכולות להחליף את קינוחי הקייטרינג או להצטרף אליהם.</p>
+        <p class="price">₪360</p>
+        <p class="per-guest">₪180 לעוגה, כולל מע"מ</p>
+      </article>
+    </section>
+
+    <section class="callout-row" aria-label="המלצה">
+      <div class="decision-box">
+        <h2>הבחירה המומלצת</h2>
+        <p>לארוחת יום הולדת ביום שישי, כדאי לבחור בארוחת השישי המלאה, להוסיף כלים, שתייה ושתי עוגות שוקולד, ולוותר על קינוחי הקייטרינג כדי לא להזמין קינוחים כפולים.</p>
+      </div>
+      <div class="decision-box">
+        <h2>עלות צפויה</h2>
+        <p><strong>₪3,508-₪3,543 כולל מע"מ, כלים, שתייה ועוגות</strong><br>בערך ₪117-₪118 לאורח, בלי קינוחי קייטרינג. אם מוסיפים גם קינוחי קייטרינג, אותה אפשרות עולה ₪4,216-₪4,251.</p>
+      </div>
+    </section>
+
+    <section class="section featured" id="full-lunch">
+      <div class="section-head">
+        <div>
+          <h2>אפשרות 1: ארוחת שישי מלאה</h2>
+          <p>הבחירה הטובה ביותר לארוחת יום הולדת: נדיבה, מגוונת ולא כבדה מדי.</p>
+        </div>
+        <div class="total-box">
+          <span>קייטרינג בלבד</span>
+          <strong>₪2,785-₪3,528 כולל מע"מ</strong>
+          <span>הטווח תלוי אם מוסיפים את כוסות הקינוח והפירות של ליאתי</span>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>מנה</th>
+            <th>פירוט</th>
+            <th>כמות</th>
+            <th>עלות משוערת כולל מע"מ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="course" data-label="מנה">פתיחים</td>
+            <td data-label="פירוט">קרוסטיני עם מגוון תוספות, כולל אפשרויות צמחוניות וטונה</td>
+            <td data-label="כמות">2 מגשים, 28 יחידות בכל מגש</td>
+            <td class="money" data-label="עלות">₪425</td>
+          </tr>
+          <tr>
+            <td class="course" data-label="מנה">ביסים צמחוניים ודגים</td>
+            <td data-label="פירוט">סושי: מגש צמחוני אחד ומגש סלמון אחד</td>
+            <td data-label="כמות">80 יחידות בסך הכל</td>
+            <td class="money" data-label="עלות">₪425</td>
+          </tr>
+          <tr>
+            <td class="course" data-label="מנה">סלטים</td>
+            <td data-label="פירוט">סלט יווני, סלט קינואה או בורגול, וסלט ירקות אסייתי או סלט ירוק עם פירות</td>
+            <td data-label="כמות">3 סלטים גדולים</td>
+            <td class="money" data-label="עלות">₪602-₪637</td>
+          </tr>
+          <tr>
+            <td class="course" data-label="מנה">מנות חמות</td>
+            <td data-label="פירוט">קערות פסטה: אחת ברוטב שמנת פטריות או רוזה, ואחת טבעונית ברוטב נפוליטנה או אליו אוליו</td>
+            <td data-label="כמות">2 קערות, 3 ליטר כל אחת</td>
+            <td class="money" data-label="עלות">₪425</td>
+          </tr>
+          <tr>
+            <td class="course" data-label="מנה">מנות חמות</td>
+            <td data-label="פירוט">מיני קישים במגוון טעמים: תרד, בצל, פטריות, בטטה וברוקולי</td>
+            <td data-label="כמות">2 מגשים, 24 יחידות בכל מגש</td>
+            <td class="money" data-label="עלות">₪425</td>
+          </tr>
+          <tr>
+            <td class="course" data-label="מנה">דגים</td>
+            <td data-label="פירוט">מגש דגים מעושנים</td>
+            <td data-label="כמות">מגש אחד</td>
+            <td class="money" data-label="עלות">₪330</td>
+          </tr>
+          <tr>
+            <td class="course" data-label="מנה">תוספת טרייה</td>
+            <td data-label="פירוט">מגש ירקות חתוכים עונתיים עם מטבל</td>
+            <td data-label="כמות">מגש אחד</td>
+            <td class="money" data-label="עלות">₪153</td>
+          </tr>
+          <tr>
+            <td class="course" data-label="מנה">קינוח קייטרינג אופציונלי</td>
+            <td data-label="פירוט">כוסות קינוח במגוון 5 סוגים</td>
+            <td data-label="כמות">2 מגשים, 40 כוסות בסך הכל</td>
+            <td class="money" data-label="עלות">₪448</td>
+          </tr>
+          <tr>
+            <td class="course" data-label="מנה">קינוח קייטרינג אופציונלי</td>
+            <td data-label="פירוט">מגש פירות עונתיים</td>
+            <td data-label="כמות">מגש אחד</td>
+            <td class="money" data-label="עלות">₪260</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section" id="fish-forward">
+      <div class="section-head">
+        <div>
+          <h2>אפשרות 2: ארוחה עם דגש על דגים</h2>
+          <p>מתאימה אם רוצים שהארוחה תרגיש מעט יותר חגיגית ומשמעותית.</p>
+        </div>
+        <div class="total-box">
+          <span>קייטרינג בלבד</span>
+          <strong>₪3,139-₪3,882 כולל מע"מ</strong>
+          <span>הטווח תלוי אם מוסיפים את כוסות הקינוח והפירות של ליאתי</span>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>מנה</th>
+            <th>פירוט</th>
+            <th>כמות</th>
+            <th>עלות משוערת כולל מע"מ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="course" data-label="מנה">תפריט בסיס</td>
+            <td data-label="פירוט">כל מה שכלול באפשרות 1</td>
+            <td data-label="כמות">ל-30 אורחים</td>
+            <td class="money" data-label="עלות">₪3,493-₪3,528</td>
+          </tr>
+          <tr>
+            <td class="course" data-label="מנה">תוספת מנת דג עיקרית</td>
+            <td data-label="פירוט">שיפודי סלמון בחרדל ודבש או בשמן זית ועשבי תיבול, או קוביות סלמון בפנקו במרינדה אסייתית</td>
+            <td data-label="כמות">30 אורחים</td>
+            <td class="money" data-label="עלות">תוספת ₪354</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section" id="budget">
+      <div class="section-head">
+        <div>
+          <h2>אפשרות 3: ארוחה חסכונית</h2>
+          <p>עדיין ארוחת צהריים ראויה, אבל עם צמצום של התוספות היקרות יותר.</p>
+        </div>
+        <div class="total-box">
+          <span>קייטרינג בלבד</span>
+          <strong>₪2,455-₪2,938 כולל מע"מ</strong>
+          <span>הטווח תלוי אם מוסיפים את כוסות הקינוח של ליאתי</span>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>מה נשאר</th>
+            <th>מה משתנה</th>
+            <th>עלות משוערת כולל מע"מ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="מה נשאר">קרוסטיני, סושי, 3 סלטים, 2 קערות פסטה, 2 מגשי מיני קישים וירקות. כוסות הקינוח נשארות אופציונליות.</td>
+            <td data-label="מה משתנה">מורידים את מגש הדגים המעושנים ואת מגש הפירות העונתיים; אפשר גם לוותר על כוסות הקינוח כי נוספו עוגות.</td>
+            <td class="money" data-label="עלות">₪2,903-₪2,938</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section" id="tableware">
+      <div class="section-head">
+        <div>
+          <h2>תוספת כלים חד-פעמיים אקולוגיים</h2>
+          <p>סט פרקטי לכל אורח, עם מוצרים מתכלים בלבד: במבוק, חיטה, נייר או חומרים קומפוסטביליים מ-Green Box.</p>
+        </div>
+        <div class="total-box">
+          <span>סה"כ כלים משוער</span>
+          <strong>₪184 כולל מע"מ</strong>
+          <span>₪229 כולל משלוח, אלא אם ההזמנה מגיעה לסף משלוח חינם</span>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>צורך</th>
+            <th>מוצר אקולוגי</th>
+            <th>כמות לרכישה</th>
+            <th>מחיר כולל מע"מ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="course" data-label="צורך">צלחת עיקרית</td>
+            <td data-label="מוצר">צלחת חיטה עגולה גדולה מתכלה, 23 ס"מ, 50 יחידות</td>
+            <td data-label="כמות">חבילה אחת</td>
+            <td class="money" data-label="מחיר">₪45</td>
+          </tr>
+          <tr>
+            <td class="course" data-label="צורך">צלחת קינוח</td>
+            <td data-label="מוצר">צלחת חיטה עגולה קטנה מתכלה, 17 ס"מ, 50 יחידות</td>
+            <td data-label="כמות">חבילה אחת</td>
+            <td class="money" data-label="מחיר">₪28</td>
+          </tr>
+          <tr>
+            <td class="course" data-label="צורך">מזלגות</td>
+            <td data-label="מוצר">מזלגות במבוק מתכלים, 25 יחידות</td>
+            <td data-label="כמות">2 חבילות, 50 יחידות בסך הכל</td>
+            <td class="money" data-label="מחיר">₪16</td>
+          </tr>
+          <tr>
+            <td class="course" data-label="צורך">סכינים</td>
+            <td data-label="מוצר">סכיני במבוק מתכלים, 25 יחידות</td>
+            <td data-label="כמות">2 חבילות, 50 יחידות בסך הכל</td>
+            <td class="money" data-label="מחיר">₪16</td>
+          </tr>
+          <tr>
+            <td class="course" data-label="צורך">כפיות לקינוח</td>
+            <td data-label="מוצר">כפיות במבוק מתכלות, 25 יחידות</td>
+            <td data-label="כמות">2 חבילות, 50 יחידות בסך הכל</td>
+            <td class="money" data-label="מחיר">₪14</td>
+          </tr>
+          <tr>
+            <td class="course" data-label="צורך">כוסות</td>
+            <td data-label="מוצר">כוסות מתכלות לשתייה חמה/קרה, 240 מ"ל, 50 יחידות</td>
+            <td data-label="כמות">חבילה אחת</td>
+            <td class="money" data-label="מחיר">₪30</td>
+          </tr>
+          <tr>
+            <td class="course" data-label="צורך">מפיות</td>
+            <td data-label="מוצר">מפיות נייר לבנות, 25*33 ס"מ, 200 יחידות</td>
+            <td data-label="כמות">חבילה אחת</td>
+            <td class="money" data-label="מחיר">₪20</td>
+          </tr>
+          <tr>
+            <td class="course" data-label="צורך">פלייסמטים</td>
+            <td data-label="מוצר">נייר פרגמנט / פלייסמנט, 40*30 ס"מ, 10 יחידות</td>
+            <td data-label="כמות">3 חבילות, 30 יחידות בסך הכל</td>
+            <td class="money" data-label="מחיר">₪15</td>
+          </tr>
+          <tr>
+            <td class="course" data-label="צורך">משלוח</td>
+            <td data-label="מוצר">משלוח Green Box, כאשר באתר מצוין שמשלוח חינם ניתן רק מעל ₪399</td>
+            <td data-label="כמות">משלוח אחד</td>
+            <td class="money" data-label="מחיר">₪45</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section" id="drinks">
+      <div class="section-head">
+        <div>
+          <h2>תוספת שתייה קלה</h2>
+          <p>כמות מומלצת למסיבת צהריים של 30 אורחים: 16 בקבוקי 1.5 ליטר, כלומר 24 ליטר בסך הכל וכ-0.8 ליטר לאורח.</p>
+        </div>
+        <div class="total-box">
+          <span>סה"כ שתייה משוער</span>
+          <strong>₪134 כולל מע"מ</strong>
+          <span>לא כולל דמי משלוח/תפעול של Wolt, שמחושבים לפי כתובת ותנאי הזמנה</span>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>סוג</th>
+            <th>מוצר Wolt Market</th>
+            <th>כמות</th>
+            <th>מחיר יחידה</th>
+            <th>סה"כ כולל מע"מ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="course" data-label="סוג">קולה רגילה</td>
+            <td data-label="מוצר">קוקה קולה בקבוק - 1.5 ליטר</td>
+            <td data-label="כמות">2 בקבוקים</td>
+            <td data-label="מחיר יחידה">₪9.50</td>
+            <td class="money" data-label="סהכ">₪19</td>
+          </tr>
+          <tr>
+            <td class="course" data-label="סוג">קולה זירו</td>
+            <td data-label="מוצר">קוקה קולה זירו בקבוק - 1.5 ליטר</td>
+            <td data-label="כמות">2 בקבוקים</td>
+            <td data-label="מחיר יחידה">₪9.50</td>
+            <td class="money" data-label="סהכ">₪19</td>
+          </tr>
+          <tr>
+            <td class="course" data-label="סוג">לימון-ליים</td>
+            <td data-label="מוצר">ספרייט זירו בקבוק - 1.5 ליטר</td>
+            <td data-label="כמות">2 בקבוקים</td>
+            <td data-label="מחיר יחידה">₪9.50</td>
+            <td class="money" data-label="סהכ">₪19</td>
+          </tr>
+          <tr>
+            <td class="course" data-label="סוג">לימון-ליים</td>
+            <td data-label="מוצר">סבן אפ בקבוק - 1.5 ליטר</td>
+            <td data-label="כמות">2 בקבוקים</td>
+            <td data-label="מחיר יחידה">₪8.50</td>
+            <td class="money" data-label="סהכ">₪17</td>
+          </tr>
+          <tr>
+            <td class="course" data-label="סוג">משקה מוגז בטעמים</td>
+            <td data-label="מוצר">שוופס ביטר לימון בקבוק - 1.5 ליטר</td>
+            <td data-label="כמות">2 בקבוקים</td>
+            <td data-label="מחיר יחידה">₪12.90</td>
+            <td class="money" data-label="סהכ">₪25.80</td>
+          </tr>
+          <tr>
+            <td class="course" data-label="סוג">סודה / מים מוגזים</td>
+            <td data-label="מוצר">שוופס סודה בקבוק - 1.5 ליטר</td>
+            <td data-label="כמות">2 בקבוקים</td>
+            <td data-label="מחיר יחידה">₪5.50</td>
+            <td class="money" data-label="סהכ">₪11</td>
+          </tr>
+          <tr>
+            <td class="course" data-label="סוג">סודה / מים מוגזים</td>
+            <td data-label="מוצר">טמפו סודה בקבוק - 1.5 ליטר</td>
+            <td data-label="כמות">2 בקבוקים</td>
+            <td data-label="מחיר יחידה">₪5.50</td>
+            <td class="money" data-label="סהכ">₪11</td>
+          </tr>
+          <tr>
+            <td class="course" data-label="סוג">מים מינרליים</td>
+            <td data-label="מוצר">נביעות מים מינרליים בקבוק - 1.5 ליטר</td>
+            <td data-label="כמות">2 בקבוקים</td>
+            <td data-label="מחיר יחידה">₪5.50</td>
+            <td class="money" data-label="סהכ">₪11</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section" id="cakes">
+      <div class="section-head">
+        <div>
+          <h2>תוספת עוגות שוקולד</h2>
+          <p>שתי עוגות שוקולד בקוטר 24 ס"מ. בגלל שהעוגות כבר נותנות קינוח מרכזי, קינוחי הקייטרינג מוצגים כאפשרות ולא כחובה.</p>
+        </div>
+        <div class="total-box">
+          <span>סה"כ עוגות</span>
+          <strong>₪360 כולל מע"מ</strong>
+          <span>2 עוגות × ₪180</span>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>פריט</th>
+            <th>כמות</th>
+            <th>מחיר יחידה</th>
+            <th>סה"כ כולל מע"מ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="course" data-label="פריט">עוגת שוקולד 24 ס"מ</td>
+            <td data-label="כמות">2 עוגות</td>
+            <td data-label="מחיר יחידה">₪180</td>
+            <td class="money" data-label="סהכ">₪360</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section" id="combined">
+      <div class="section-head">
+        <div>
+          <h2>סיכום עלויות כולל כלים, שתייה ועוגות</h2>
+          <p>הסכומים כאן כוללים מע"מ ומוסיפים לכל אפשרות קייטרינג את הכלים, השתייה ושתי עוגות השוקולד. קינוחי הקייטרינג מוצגים בשתי חלופות: עם או בלי.</p>
+        </div>
+        <div class="total-box">
+          <span>תוספות קבועות</span>
+          <strong>₪723 כולל מע"מ</strong>
+          <span>₪229 כלים + ₪134 שתייה + ₪360 עוגות, ללא דמי Wolt</span>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>אפשרות</th>
+            <th>קינוחי קייטרינג אופציונליים</th>
+            <th>קייטרינג כולל מע"מ</th>
+            <th>כלים + שתייה + עוגות</th>
+            <th>סה"כ צפוי</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="course" data-label="אפשרות">ארוחת שישי מלאה</td>
+            <td data-label="קינוחי קייטרינג">בלי כוסות קינוח ופירות</td>
+            <td data-label="קייטרינג">₪2,785-₪2,820</td>
+            <td data-label="תוספות">₪723</td>
+            <td class="money" data-label="סהכ">₪3,508-₪3,543</td>
+          </tr>
+          <tr>
+            <td class="course" data-label="אפשרות">ארוחה עם דגש על דגים</td>
+            <td data-label="קינוחי קייטרינג">בלי כוסות קינוח ופירות</td>
+            <td data-label="קייטרינג">₪3,139-₪3,174</td>
+            <td data-label="תוספות">₪723</td>
+            <td class="money" data-label="סהכ">₪3,862-₪3,897</td>
+          </tr>
+          <tr>
+            <td class="course" data-label="אפשרות">ארוחה חסכונית</td>
+            <td data-label="קינוחי קייטרינג">בלי כוסות קינוח</td>
+            <td data-label="קייטרינג">₪2,455-₪2,490</td>
+            <td data-label="תוספות">₪723</td>
+            <td class="money" data-label="סהכ">₪3,178-₪3,213</td>
+          </tr>
+          <tr>
+            <td class="course" data-label="אפשרות">ארוחת שישי מלאה</td>
+            <td data-label="קינוחי קייטרינג">עם כוסות קינוח ופירות</td>
+            <td data-label="קייטרינג">₪3,493-₪3,528</td>
+            <td data-label="תוספות">₪723</td>
+            <td class="money" data-label="סהכ">₪4,216-₪4,251</td>
+          </tr>
+          <tr>
+            <td class="course" data-label="אפשרות">ארוחה עם דגש על דגים</td>
+            <td data-label="קינוחי קייטרינג">עם כוסות קינוח ופירות</td>
+            <td data-label="קייטרינג">₪3,847-₪3,882</td>
+            <td data-label="תוספות">₪723</td>
+            <td class="money" data-label="סהכ">₪4,570-₪4,605</td>
+          </tr>
+          <tr>
+            <td class="course" data-label="אפשרות">ארוחה חסכונית</td>
+            <td data-label="קינוחי קייטרינג">עם כוסות קינוח</td>
+            <td data-label="קייטרינג">₪2,903-₪2,938</td>
+            <td data-label="תוספות">₪723</td>
+            <td class="money" data-label="סהכ">₪3,626-₪3,661</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="notes" id="notes">
+      <article class="note">
+        <h2>שאלות מומלצות לפני הזמנה</h2>
+        <ul>
+          <li>לוודא אם 3 סלטים גדולים מספיקים ל-30 אורחים לצד המנות החמות.</li>
+          <li>לשאול אם המגשים כוללים כלי הגשה, הוראות חימום ותוויות למנות.</li>
+          <li>לבקש מחיר משלוח קייטרינג לכתובת האירוע ולבדוק אם שישי בצהריים משפיע על התזמון או המחיר.</li>
+          <li>בכלים החד-פעמיים כדאי להשאיר כמה מזלגות, סכינים וכוסות ספייר; החבילות המומלצות כבר משאירות עודפים מעבר ל-30 אורחים.</li>
+          <li>ב-Wolt כדאי לבדוק את דמי המשלוח ודמי התפעול לפני הזמנה; מוצרי השתייה עצמם כבר חושבו לפי המחירים שמופיעים ב-Wolt Market רחובות.</li>
+          <li>אם מזמינים את שתי עוגות השוקולד, אפשר לוותר על קינוחי הקייטרינג כדי לחסוך ₪448-₪708, תלוי באפשרות התפריט.</li>
+          <li>לאשר הצעת מחיר סופית כולל מע"מ ומשלוח לפני ביצוע ההזמנה.</li>
+        </ul>
+      </article>
+
+      <article class="note">
+        <h2>מקורות באתרי הספקים</h2>
+        <ul>
+          <li><a href="https://liati.co.il/%D7%A7%D7%99%D7%99%D7%98%D7%A8%D7%99%D7%A0%D7%92/">תפריט קייטרינג חלבי</a></li>
+          <li><a href="https://liati.co.il/%D7%9E%D7%92%D7%A9%D7%99-%D7%90%D7%99%D7%A8%D7%95%D7%97/">תפריט מגשי אירוח</a></li>
+          <li><a href="https://liati.co.il/%D7%A7%D7%98%D7%9C%D7%95%D7%92/%D7%9E%D7%92%D7%A9%D7%99-%D7%90%D7%99%D7%A8%D7%95%D7%97/%D7%A1%D7%9C%D7%98%D7%99%D7%9D/">סלטים</a>, <a href="https://liati.co.il/%D7%A7%D7%98%D7%9C%D7%95%D7%92/%D7%9E%D7%92%D7%A9%D7%99-%D7%90%D7%99%D7%A8%D7%95%D7%97/%D7%A4%D7%A1%D7%98%D7%94/">פסטה</a>, <a href="https://liati.co.il/%D7%A7%D7%98%D7%9C%D7%95%D7%92/%D7%9E%D7%92%D7%A9%D7%99-%D7%90%D7%99%D7%A8%D7%95%D7%97/%D7%A1%D7%95%D7%A9%D7%99-3/">סושי</a>, <a href="https://liati.co.il/%D7%A7%D7%98%D7%9C%D7%95%D7%92/%D7%9E%D7%92%D7%A9%D7%99-%D7%90%D7%99%D7%A8%D7%95%D7%97/%D7%9E%D7%99%D7%A0%D7%99-%D7%A7%D7%99%D7%A9/">מיני קיש</a></li>
+          <li><a href="https://liati.co.il/%D7%A7%D7%98%D7%9C%D7%95%D7%92/%D7%A7%D7%99%D7%A0%D7%95%D7%97%D7%99%D7%9D/%D7%9E%D7%92%D7%95%D7%95%D7%9F-%D7%A7%D7%99%D7%A0%D7%95%D7%97%D7%99%D7%9D/">כוסות קינוח</a> ו<a href="https://liati.co.il/%D7%A7%D7%99%D7%A0%D7%95%D7%97%D7%99%D7%9D/">תפריט קינוחים</a></li>
+          <li><a href="https://www.mitkalim.co.il/collections/%D7%A6%D7%9C%D7%97%D7%95%D7%AA">צלחות Green Box</a>, <a href="https://www.mitkalim.co.il/collections/%D7%A1%D7%9B%D7%95%D7%9D-1">סכו"ם</a>, <a href="https://www.mitkalim.co.il/collections/%D7%9B%D7%95%D7%A1%D7%95%D7%AA">כוסות</a> ו<a href="https://www.mitkalim.co.il/collections/%D7%A0%D7%99%D7%99%D7%A8">מוצרי נייר</a></li>
+          <li><a href="https://wolt.com/he/isr/rishon-lezion-hashfela-area/venue/wolt-market-rehovot/items/menucategory-167">משקאות מוגזים ב-Wolt Market רחובות</a> ו<a href="https://wolt.com/he/isr/rishon-lezion-hashfela-area/venue/wolt-market-rehovot/items/menucategory-168">מים ב-Wolt Market רחובות</a></li>
+        </ul>
+      </article>
+    </section>
+
+    <footer>
+      הוכן עבור מסיבת יום הולדת של 30 אורחים ביום שישי בצהריים. כל המחירים בעמוד כוללים מע"מ. הערכות הקייטרינג מבוססות על מחירי מגשים שמופיעים באתר כאשר היו זמינים, ויש לאשר אותן מול ליאתי לפני הזמנה. אין צורך בציוד, עריכה או מלצרים; משלוח הקייטרינג עצמו עדיין צריך אישור מול הספק. מחירי הכלים מבוססים על מוצרי Green Box וכוללים מע"מ. מחירי השתייה מבוססים על Wolt Market רחובות ואינם כוללים דמי משלוח/תפעול של Wolt. מחיר העוגות חושב לפי ₪180 לעוגה כפי שנמסר.
+    </footer>
+  </main>
+</body>
+</html>
